@@ -1,6 +1,7 @@
+var imgs = document.querySelectorAll("img");
 
-
-function func5(vara)
-{var newvar="images/"+vara + "_2.jpg";
-    document.querySelector("#"+vara).src=newvar;
-}
+Array.from(imgs).forEach((img, i) => {
+    img.addEventListener('mouseover', function () {
+        img.src = "images/image" + (i + 1) + "_2.jpg";
+    })
+});
